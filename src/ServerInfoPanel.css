@@ -1,0 +1,189 @@
+
+/* .background{
+   position: fixed;
+} */
+
+.banner-image{
+  width: 100%;
+  background-size: cover;
+  mask-image: linear-gradient(to right,transparent,black 5%);
+  -webkit-mask-image: linear-gradient(to right,transparent,black 5%);
+  margin: 0;
+  position: fixed;
+
+}
+.server{
+    width: 100%;
+    padding: 40px 10%;
+    position: fixed;
+    font-size: 14px;
+    color: #e5e5e5;
+    z-index: 1;
+  }
+
+  .leftside{
+    position: fixed;
+    flex-direction: column;
+    margin-top: 7%;
+    z-index: 50;
+    cursor: pointer;
+  }
+  
+
+  .img{
+    width:50%
+    
+  }
+  .leftbottom{
+    position: fixed;
+    flex-direction:column-reverse;
+    z-index: 50;
+    margin-top:40%;
+    margin-left: 3%;
+    cursor: pointer;
+
+  }
+
+
+  .serverdata{
+    position: fixed;
+    margin-top: 7%;
+    margin-left: 10%;
+    z-index: 50;
+    color: aliceblue;
+    font-size:x-large
+    
+  }
+  .data1{
+    font-size:x-small;
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+  .germany{
+    margin-right: 1%;
+  }
+ .data2{
+  margin-top: 1%;
+  font-size:x-small;
+ }
+
+ .data3{
+   margin-top: 2%;
+ }
+ button:hover{
+  cursor: pointer;
+  background-color:grey;
+  color: red;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  
+ }
+ button{
+  margin:2% 2%;
+  background-color:rgba(0,0,0,0);
+  color: rgb(11, 0, 11);
+  padding:1% 3%;
+  border: none;
+  font-weight: bolder
+ }
+
+ .player{
+  font-size:large;
+  margin-left: 2.4%;
+  color: aquamarine;
+ }
+
+ .ping{
+  font-size:large;
+  margin-left: 2.4%;
+  color: aquamarine;
+ }
+ .tickrate{
+  font-size:large;
+  margin-left: 2.4%;
+  color: aquamarine;
+ }
+
+ .player1{
+  font-size:small;
+  margin-left: 2.9%;
+ }
+
+ .ping1{
+  font-size:small;
+  margin-left: 5%;
+ }
+ .tickrate1{
+  font-size:small;
+  margin-left: 4%;
+ }
+ .setting{
+  font-size:large;
+  margin-left: 2.5%;
+  color:whitesmoke;
+  font-weight: bold;
+ }
+ .advanced{
+  font-size:large;
+  margin-left: 27%;
+  color: whitesmoke;
+  font-weight: bold;
+ }
+ .rule{
+  font-size:large;
+  margin-left: 33%;
+  color:whitesmoke;
+  font-weight: bold;
+ }
+
+
+ .settings1{
+  flex-direction: column;
+ }
+
+ .spanu1{
+  margin-left: 12%;
+ }
+ .spanu2{
+  margin-left: 16.3%;
+ }
+ .spanu3{
+  margin-left: 19.7%;
+ }
+ .spanu4{
+  margin-left: 18%;
+ }
+
+ .spanux1{
+  position: fixed;
+  margin-top: 26%;
+  margin-left: 51%;
+  z-index: 50;
+ }
+
+ .bullet{
+  position: fixed;
+  margin-top: 29.9%;
+  margin-left: 49%;
+  z-index: 50;
+  
+ }
+ .playerhealth{
+  position: fixed;
+  margin-top: 34%;
+  margin-left: 49%;
+  z-index: 50;
+  
+ }
+
+ .homeimg{
+   position: fixed;
+   z-index: 50;
+   margin-left: 95%;
+   margin-top: 4%;
+   width: 40px;
+   cursor: pointer;
+ }
+ 
+
