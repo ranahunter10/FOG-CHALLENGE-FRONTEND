@@ -29,7 +29,7 @@ const ServerInfoPanel = () => {
 
       <button className="bullet">Bullet Damage - {serverData.bulletdamage}</button>
       <button className="playerhealth">Player Health -{serverData.playerhealth}</button>
-      <img className="homeimg" src="../public/Assests/home.png" alt="" /> 
+      <img className="homeimg" src="../Assests/home.png" alt="" /> 
       
 
 
@@ -39,38 +39,38 @@ const ServerInfoPanel = () => {
           <div className="icon">
             <img
               className="img img1"
-              src="../public/Assests/icon3.png"
+              src="../Assests/icon3.png"
               alt=""
             />
           </div>
           <div className="icon">
             <img
               className="img img2"
-              src="../public/Assests/icon2.png"
+              src="../Assests/icon2.png"
               alt=""
             />
           </div>
           <div className="icon">
             <img
               className="img  img3"
-              src="../public/Assests/icon3.png"
+              src="../Assests/icon3.png"
               alt=""
             />
           </div>
           <div className="icon">
             <img
               className="img  img4"
-              src="../public/Assests/icon1.png"
+              src="../Assests/icon1.png"
               alt=""
             />
           </div>
         </div>
         <div className="leftbottom">
           <div>
-            <img className="img" src="../public/Assests/question.png" alt="" />
+            <img className="img" src="../Assests/question.png" alt="" />
           </div>
           <div>
-            <img className="img" src="../public/Assests/exit.png" alt="" />
+            <img className="img" src="../Assests/exit.png" alt="" />
           </div>
         </div>
         <div className="serverdata">
@@ -78,7 +78,7 @@ const ServerInfoPanel = () => {
           <div className="data1">
             <img
               className="germany"
-              src="../public/Assests/germanyflag.svg"
+              src="../Assests/germanyflag.svg"
               alt=""
             />
             {serverData.region}
