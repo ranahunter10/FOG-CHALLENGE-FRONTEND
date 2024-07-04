@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import side from "../../public/Assests/side.png";
 
 const Navbar = () => {
   return (
@@ -8,7 +7,7 @@ const Navbar = () => {
         <div className="navbar-left">
           <ul>
             <li>
-              <img src={side} alt="" />
+              <img src="./../Assests/side.png" alt="" />
             </li>
             <li>MULTIPLAYER</li>
             <li>/</li>

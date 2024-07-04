@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import "./ServerInfoPanel.css";
-import back from "../public/Assests/background.png";
 import axios from "axios"
 import { useEffect, useState } from "react";
 import { baseurl } from "./serverinfo";
@@ -131,7 +130,7 @@ const ServerInfoPanel = () => {
           </div>
         </div>
 
-        <img src={back} alt="" className="banner-image" />
+        <img src="../Assests/background.png" alt="" className="banner-image" />
       </div>
     </div>
   );
