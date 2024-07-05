@@ -1,91 +1,75 @@
 import Navbar from "./components/Navbar";
 import "./ServerInfoPanel.css";
-import axios from "axios"
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { baseurl } from "./serverinfo";
 
 const ServerInfoPanel = () => {
+  const [serverData, setServerData] = useState({
+    name: "#1 | NASA | Noobs Welcome | Conquest 40Hz",
+    region: "CONQUEST LARGE - SIEGE OF SHANGAI - NORMAL - 40HZ",
+    linkData:
+      "server protected by The_K-50 AntiCheat. Vip !Rules, Questions, Request, Appeal, Visit us: www.epg.gg | Discord https://discord.gg/3r5NK4d",
+    players: "63/64",
+    ping: "47ms",
+    tickrate: "40HZ",
+    regioneurope: "DE",
+    punkbaster: "ON",
+    fairfight: "ON",
+    password: "OF",
+    preset: "normal",
+    tickets: "400",
+    minimap: "ON",
+    vehicals: "ON",
+    teambalance: "ON",
+    regenerativehealth: "ON",
+    bulletdamage: "25",
+    playerhealth: "100",
+  });
 
- const [serverData,setServerData]=useState({});
+  // serveData is coming from backend but in case if the backend is not up due to some resons i am storing the serdData manually as well in use state hook.
 
- setServerData(  "name": "#1 | NASA | Noobs Welcome | Conquest 40Hz",
-  "region": "CONQUEST LARGE - SIEGE OF SHANGAI - NORMAL - 40HZ",
-  "linkData": "server protected by The_K-50 AntiCheat. Vip !Rules, Questions, Request, Appeal, Visit us: www.epg.gg | Discord https://discord.gg/3r5NK4d",
-  "players": "63/64",
-  "ping": "47ms",
-  "tickrate": "40HZ",
-  "regioneurope": "DE",
-  "punkbaster": "ON",
-  "fairfight": "ON",
-  "password": "OF",
-  "preset": "normal",
-  "tickets": "400",
-  "minimap": "ON",
-  "vehicals": "ON",
-  "teambalance": "ON",
-  "regenerativehealth": "ON",
-  "bulletdamage": "25",
-  "playerhealth": "100"
-})
-
-// serveData is coming from backend but in case if the backend is not up due to some resons i am storing the serdData manually as well .
-
- useEffect(()=>{
-
-
-  // API CALL TO GET DATA FROM THE SERVER
-   axios.get(`${baseurl}/gamedata`).then((result) => {
-      setServerData(result.data)
-   }).catch((err) => {
-     console.log("error occured",err)
-   });
-
-
- },[])
-
-
+  useEffect(() => {
+    // API CALL TO GET DATA FROM THE SERVER
+    axios
+      .get(`${baseurl}/gamedata`)
+      .then((result) => {
+        setServerData(result.data);
+      })
+      .catch((err) => {
+        console.log("error occured", err);
+      });
+  }, []);
 
   return (
     <div className="home">
       <Navbar />
-       <span className="spanux1"><button>Tickets - {serverData.tickets}</button></span>
+      <span className="spanux1">
+        <button>Tickets - {serverData.tickets}</button>
+      </span>
 
-      <button className="bullet">Bullet Damage - {serverData.bulletdamage}</button>
-      <button className="playerhealth">Player Health -{serverData.playerhealth}</button>
-      <img className="homeimg" src="../Assests/home.png" alt="" /> 
-      
-
+      <button className="bullet">
+        Bullet Damage - {serverData.bulletdamage}
+      </button>
+      <button className="playerhealth">
+        Player Health -{serverData.playerhealth}
+      </button>
+      <img className="homeimg" src="../Assests/home.png" alt="" />
 
       <h1 className="server">SERVER INFO</h1>
       <div className="background">
         <div className="leftside">
           <div className="icon">
-            <img
-              className="img img1"
-              src="../Assests/icon3.png"
-              alt=""
-            />
+            <img className="img img1" src="../Assests/icon3.png" alt="" />
           </div>
           <div className="icon">
-            <img
-              className="img img2"
-              src="../Assests/icon2.png"
-              alt=""
-            />
+            <img className="img img2" src="../Assests/icon2.png" alt="" />
           </div>
           <div className="icon">
-            <img
-              className="img  img3"
-              src="../Assests/icon3.png"
-              alt=""
-            />
+            <img className="img  img3" src="../Assests/icon3.png" alt="" />
           </div>
           <div className="icon">
-            <img
-              className="img  img4"
-              src="../Assests/icon1.png"
-              alt=""
-            />
+            <img className="img  img4" src="../Assests/icon1.png" alt="" />
           </div>
         </div>
         <div className="leftbottom">
@@ -99,11 +83,7 @@ const ServerInfoPanel = () => {
         <div className="serverdata">
           {serverData.name}
           <div className="data1">
-            <img
-              className="germany"
-              src="../Assests/germanyflag.svg"
-              alt=""
-            />
+            <img className="germany" src="../Assests/germanyflag.svg" alt="" />
             {serverData.region}
             <div className="data2">{serverData.linkData}</div>
             <div className="data3">
@@ -133,19 +113,29 @@ const ServerInfoPanel = () => {
             <div className="settings1">
               <div>
                 <button>Region Europe - {serverData.regioneurope}</button>
-                <span className="spanu1"><button>Minimap - {serverData.minimap}</button></span>
+                <span className="spanu1">
+                  <button>Minimap - {serverData.minimap}</button>
+                </span>
               </div>
               <div>
                 <button>Punkbaster -{serverData.punkbaster}</button>
-                <span className="spanu2"><button>Vehicals - {serverData.vehicals}</button></span>
+                <span className="spanu2">
+                  <button>Vehicals - {serverData.vehicals}</button>
+                </span>
               </div>
               <div>
                 <button>Fairfight -{serverData.fairfight}</button>
-                <span className="spanu3"><button>Team Balance - {serverData.teambalance}</button></span>
+                <span className="spanu3">
+                  <button>Team Balance - {serverData.teambalance}</button>
+                </span>
               </div>
               <div>
                 <button>Password -{serverData.password}</button>
-                <span className="spanu4"><button>Regenrative Health - {serverData.regenerativehealth}</button></span>
+                <span className="spanu4">
+                  <button>
+                    Regenrative Health - {serverData.regenerativehealth}
+                  </button>
+                </span>
               </div>
               <div>
                 <button>Preset -{serverData.preset}</button>
