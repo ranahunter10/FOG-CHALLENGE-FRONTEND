@@ -31,7 +31,9 @@ const ServerInfoPanel = () => {
 // serveData is coming from backend but in case if the backend is not up due to some resons i am storing the serdData manually as well .
 
  useEffect(()=>{
-  
+
+
+  // API CALL TO GET DATA FROM THE SERVER
    axios.get(`${baseurl}/gamedata`).then((result) => {
       setServerData(result.data)
    }).catch((err) => {
